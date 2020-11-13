@@ -26,21 +26,18 @@ function userInput(event){
 
 }
 
-function clearInput(event){
+function clearResults(event){
 
     event.preventDefault()
 
-    $("#exampleInputEmail1").val("")
-    var numberOfSearchTerms = $("#formControlSelect").val()
-    var startYear = $("#startYear").val("")
-    var endYear = $("#endYear").val("")
+    $("#display").empty()
 
 
 }
 
 
 searchButton.on("click",userInput)
-clearButton.on("click",clearInput)
+clearButton.on("click",clearResults)
 
 
 
