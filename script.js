@@ -14,7 +14,8 @@
     .then(function(response) {
         //console.log(response);
         var headline = response.headline.main;
-        var article = response.lead_paragraph
+        var leadParagraph = response.lead_paragraph;
+        var url = response.web_url;
 
 
     })
