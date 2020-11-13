@@ -2,6 +2,7 @@
 
 
 var searchButton = $("#searchButton")
+var clearButton = $("#clearButton")
 
 
 function userInput(event){
@@ -15,15 +16,34 @@ function userInput(event){
     var startYear = $("#startYear").val()
     var endYear = $("#endYear").val()
 
+    console.log("the number of search term values is: "+numberOfSearchTerms)
 
-    console.log(searchTerm)
-    console.log(numberOfSearchTerms)
+    console.log("search terms: "+searchTerm)
+    console.log("start year: "+startYear)
+    console.log("end year: "+endYear)
+   
+
+
+}
+
+function clearInput(event){
+
+    event.preventDefault()
+
+    $("#exampleInputEmail1").val("")
+    var numberOfSearchTerms = $("#formControlSelect").val()
+    var startYear = $("#startYear").val("")
+    var endYear = $("#endYear").val("")
 
 
 }
 
 
 searchButton.on("click",userInput)
+clearButton.on("click",clearInput)
+
+
+
     //build the query url
 
      var search = $("#exampleInputEmail1"); //get code from html with jQuery
